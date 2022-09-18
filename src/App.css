@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 100%;
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.box1 {
+  background-color: var(--light-orange);
+  border-radius: 10px 0 0 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box2 {
+  background-color: var(--dark-cyan);
+}
+.box3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+.box1,
+.box2,
+.box3 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 50px;
+  width: 20%;
+  height: 70%;
+}
+.icon {
+  width: 50px;
+}
+.heading {
+  color: var(--very-light-gray);
+  font-size: 40px;
+  font-family: "Big Shoulders Display", cursive;
+}
+.description {
+  margin: 20px 0 30px 0;
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+}
+.learn-btn1,
+.learn-btn2,
+.learn-btn3 {
+  width: 70%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: var(--very-light-gray);
+  font-family: "Lexend Deca", sans-serif;
+  border: solid 2px white;
+  transition: all 300ms ease-in-out;
+}
+.learn-btn1 {
+  color: var(--light-orange);
+}
+.learn-btn2 {
+  color: var(--dark-cyan);
+}
+.learn-btn3 {
+  color: var(--very-dark-cyan);
 }
 
-.App-link {
-  color: #61dafb;
+.learn-btn1:hover,
+.learn-btn2:hover,
+.learn-btn3:hover {
+  transition: all 300ms ease-in-out;
+  color: var(--very-light-gray);
+  background-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 540px) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 30px 0 30px 0;
   }
-  to {
-    transform: rotate(360deg);
+  .box1 {
+    border-radius: 10px 10px 0 0;
+  }
+  .box3 {
+    border-radius: 0 0 10px 10px;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    width: 90%;
+    gap: 20px;
+    padding: 30px;
+  }
+  .heading {
+    font-size: 35px;
+  }
+  .description {
+    font-size: 15px;
+  }
+  .learn-btn1,
+  .learn-btn2,
+  .learn-btn3 {
+    width: 60%;
+    height: 40px;
   }
 }
